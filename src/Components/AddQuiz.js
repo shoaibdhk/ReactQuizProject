@@ -61,6 +61,11 @@ export default class AddQuiz extends Component {
                     <button
                       className='btn btn-danger btn-sm d-inline-block float-right'
                       style={{ borderRadius: '90%', padding: '10px 15px' }}
+                      onClick={e => {
+                        e.preventDefault();
+                        questions.splice(index, 1);
+                        this.setState({ questions });
+                      }}
                     >
                       &times;
                     </button>
